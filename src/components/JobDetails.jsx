@@ -2,8 +2,8 @@ import React from "react";
 
 const JobDetails = ({ details, onResetPage }) => {
   const {
-    type,
     title,
+    type,
     description,
     location,
     company,

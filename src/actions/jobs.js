@@ -17,8 +17,8 @@ export const initiateGetJobs = (data) => {
       }
 
       const jobs = await axios.get(
-       
-        `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${description}&location=${location}${full_time}${page}`
+        
+        `https://yabba-dabba-duls-cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${description}&location=${location}${full_time}${page}`
       );
       const sortedJobs = jobs.data.sort(
         (a, b) =>

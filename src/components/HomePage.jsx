@@ -40,18 +40,20 @@ const HomePage = (props) => {
   };
 
   const handleItemClick = (jobId) => {
-    setPage("details");
     setJobId(jobId);
+    setPage("details");
   };
 
   const handleResetPage = () => {
     setPage("home");
   };
 
-  let jobDetails = {};
-  if (page === "details") {
-    jobDetails = results.find((job) => job.id === jobId);
-  }
+  const [jobDetails, setJobDetails] = useState(null);
+
+  useEffect(() => {
+    setJobDetails(results.find((job) => job.id === jobId));
+  }, [jobId]);
+  console.log(jobDetails);
   return (
     <div>
       <div className={`${page === "details" && "hide"}`}>
@@ -67,7 +69,9 @@ const HomePage = (props) => {
         </div>
       </div>
       <div className={`${page === "home" && "hide"}`}>
-        <JobDetails details={jobDetails} onResetPage={handleResetPage} />
+        {jobId && jobDetails && (
+          <JobDetails details={jobDetails} onResetPage={handleResetPage} />
+        )}
       </div>
     </div>
   );
