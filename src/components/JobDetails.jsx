@@ -26,7 +26,10 @@ const JobDetails = ({ details, onResetPage }) => {
         <div className="left-section">
           <div className="title">{title}</div>
           <hr />
-          <div className="job-description">{description}</div>
+          <div
+            className="job-description"
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></div>
         </div>
         <div className="right-section">
           <div className="company-details">
