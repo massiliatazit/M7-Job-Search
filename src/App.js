@@ -1,14 +1,16 @@
 import {Provider} from "react-redux"
-import Color from "./components/color"
-import Counter from "./components/counter"
-import store from "./store"
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import Color from "./components/color"
+import HomePage from './components/HomePage';
+import store from "./store/store"
+import './css/styles.css'
 function App() {
   return (
     <Provider store={store}>
      
       <>
-      <Counter/>
-      <Color/>
+      <HomePage/>
       </>
       
     </Provider>
