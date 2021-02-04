@@ -6,7 +6,7 @@ const jobsReducer = (state = [], action) => {
         return [...state, ...action.jobs];
         case "ADD_TO_FAVOURITES":
       return [
-        ...state,...action.favorites]
+        ...state,...action.favourites]
       
     case "REMOVE_FROM_FAVOURITES":
       return [

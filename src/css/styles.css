@@ -235,3 +235,67 @@
    }
   }
   
+  
+#main-nav {
+  background-color: var(--tWhite);
+}
+
+#main-nav a {
+  color: var(--tBlack);
+  font-weight: bold;
+  padding: 6px 20px;
+  margin: 0px 14px;
+  border-bottom: 1px solid transparent;
+  position: relative;
+  border-radius: 0.05rem;
+}
+
+#main-nav a:hover {
+  background-color: var(--tBlack);
+  color: var(--tWhite);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+#main-nav .logo-container {
+  background-color: var(--tWhite);
+  padding: 4px 6px;
+  border-radius: 0.05rem;
+  position: relative;
+}
+
+#main-nav .logo-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -6px;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--tPurple);
+}
+
+#main-nav .logo-container .fa-dev {
+  font-size: 1.5rem;
+}
+
+#main-search {
+  background-color: var(--tBlack);
+  padding: 30px 20px;
+  color: var(--tWhite);
+  border-radius: 0.15rem;
+}
+
+#main-search input {
+  padding: 14px;
+  border: none;
+  border-radius: 0.15rem;
+}
+
+.search-btn {
+  background-color: var(--tPurple);
+  border-color: var(--tPurple);
+  transform: scale(1);
+  padding: 6px 16px;
+  margin-bottom: 7px;
+  transition: transform 0.15s ease-in-out;
+}
